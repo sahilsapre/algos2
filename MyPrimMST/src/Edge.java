@@ -1,4 +1,4 @@
-public class Edge implements Comparable<Edge>{
+public class Edge {
 	private final int u; // one endpoint
 	private final int v; // other endpoint
 	private final int cost;
@@ -9,7 +9,7 @@ public class Edge implements Comparable<Edge>{
 		this.v 	  = v;
 		this.cost = cost;
 	}
-	
+
 	public int cost()
 	{
 		return cost;
@@ -23,12 +23,5 @@ public class Edge implements Comparable<Edge>{
 	public int v()
 	{
 		return v;
-	}
-	
-	@Override
-	public int compareTo(Edge otherEdge)
-	{
-		return (int) ((this.cost < otherEdge.cost) ? 
-				-1 : !(this.cost == otherEdge.cost));
 	}
 }
